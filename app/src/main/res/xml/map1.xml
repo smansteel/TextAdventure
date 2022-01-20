@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map1 title="map1forTextAdventure" author="Maxime TARDIEU">
+    <object>
+        <id>1</id>
+        <name>12</name>
+    </object>
+    <room>
+        <coordsx>0</coordsx>
+        <coordsy>0</coordsy>
+        <name>Start Room</name>
+        <name_fr>Salle de départ</name_fr>
+        <text>Text</text>
+        <text_fr>Texte</text_fr>
+    </room>
+    <room>
+        <coordsx>1</coordsx>
+        <coordsy>0</coordsy>
+        <name>Action Room 1</name>
+        <name_fr>Salle de départ</name_fr>
+        <text>Text</text>
+        <text_fr>Texte</text_fr>
+    </room>
+    <room>
+        <coordsx>0</coordsx>
+        <coordsy>1</coordsy>
+        <name>Action Room 2</name>
+        <name_fr>Salle de départ</name_fr>
+        <text>Text</text>
+        <text_fr>Texte</text_fr>
+    </room>
+</map1>
