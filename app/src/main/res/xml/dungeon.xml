@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dungeon title="Map 1">
+    <items>
+
+        <item>
+            <name>Flashlight</name>
+            <id>0</id>
+        </item>
+
+        <item>
+            <name>Key</name>
+            <id>1</id>
+        </item>
+
+
+        <item>
+            <name>Bucket</name>
+            <id>2</id>
+
+        </item>
+
+    </items>
+
+    <rooms>
+        <room>
+
+            <east>4</east>
+            <description>TUTORIAL Get the light that is on the floor et go EAST to face your adventure !</description>
+            <room_item>0</room_item>
+
+        </room>
+
+        <room>
+            <east>5</east>
+
+            <description>This is your first key !</description>
+            <room_item>1</room_item>
+
+        </room>
+
+        <room>
+            <east>6</east>
+            <description>There does not seem to be an issue there</description>
+        </room>
+
+        <room>
+            <east>7</east>
+            <description>is the the BUCKEEET ???</description>
+            <room_item>2</room_item>
+        </room>
+
+        <room>
+            <south>5</south>
+            <east>8</east>
+            <west>0</west>
+            <description>I see a door east, but there is a path south</description>
+        </room>
+
+        <room>
+            <west>1</west>
+            <south>6</south>
+            <north>4</north>
+            <description>This is a well lit room</description>
+        </room>
+
+        <room>
+            <west>2</west>
+            <north>5</north>
+            <description>this is less of a well lit room, and it's cold :/</description>
+        </room>
+
+        <room>
+            <west>3</west>
+            <east>11</east>
+            <description>I think I see the end of the corridor</description>
+        </room>
+
+        <room>
+            <east>12</east>
+            <west>4</west>
+            <description>You passed the first bridge, congratulations</description>
+        </room>
+
+        <room>
+            <east>13</east>
+            <south>10</south>
+            <description>I see a door south</description>
+        </room>
+
+        <room>
+            <north>9</north>
+            <south>11</south>
+            <description>You found the key, let's explore this corridor</description>
+        </room>
+
+        <room>
+
+            <west>7</west>
+            <north>10</north>
+            <description>yes, corridor</description>
+        </room>
+
+        <room>
+
+            <south>13</south>
+            <east>16</east>
+            <west>8</west>
+            <description>I hear bats east, don't go there :/</description>
+        </room>
+
+        <room>
+            <north>12</north>
+            <south>14</south>
+            <east>17</east>
+            <west>9</west>
+            <description>You are probably wondering if you are far from the end, probably, i don't know</description>
+        </room>
+
+        <room>
+            <north>13</north>
+            <description>Nothing ahead you should go back</description>
+        </room>
+
+        <room>
+            <description>The end, congratulations !!, WINNER CHICKEN DINNER</description>
+        </room>
+
+        <room>
+            <west>12</west>
+            <description>The baaaaaaats aaaaaaaaaaaa, go back please, it was obviously east when i said there</description>
+        </room>
+
+        <room>
+            <west>13</west>
+            <south>18</south>
+            <description>Oh there is a key here ? might be useful later</description>
+            <room_item>1</room_item>
+
+        </room>
+
+        <room>
+            <west>13</west>
+            <south>19</south>
+            <description>I smell chicken</description>
+        </room>
+
+        <room>
+            <north>17</north>
+            <west>20</west>
+            <description>There doesn't seem to be a bridge, do you have a bucket to empty the river by hand</description>
+        </room>
+
+    </rooms>
+
+</dungeon>
