@@ -59,4 +59,52 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.724" />
 
+    <Button
+        android:id="@+id/btn_quit"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:background="@drawable/roundedbuttons"
+        android:backgroundTint="@null"
+        android:text="quit"
+
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.995" />
+
+    <Button
+        android:id="@+id/btn_about"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:background="@drawable/roundedbuttons"
+        android:backgroundTint="@null"
+        android:text="about"
+
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.995" />
+
+    <Button
+        android:id="@+id/btn_help"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:background="@drawable/roundedbuttons"
+        android:backgroundTint="@null"
+        android:text="HELp"
+
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.995" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.XmlResourceParser;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.strictmode.CleartextNetworkViolation;
@@ -527,11 +528,27 @@ public class game_window extends AppCompatActivity
 
     protected void displayRoomImageV2(int currentPos)
     {
-/*        int[] imageList = {R.drawable.door, R.drawable.dungeon, R.drawable.key, R.drawable.room3, R.drawable.ic_launcher_foreground};
+        int[] imageList = {R.drawable.door, R.drawable.dungeon, R.drawable.key, R.drawable.bats, R.drawable.graal};
 
         // only some rooms have images 1 ;49
 
-        imageView.setImageResource(   imageList[currentPos] );*/
+        //imageView.setImageResource(   imageList[currentPos] );
+        imageView.setVisibility(View.VISIBLE);
+        if(currentPos== 1|currentPos== 17){
+            imageView.setImageResource(imageList[2]);
+        }else if (currentPos== 4|currentPos== 10){
+        imageView.setImageResource(imageList[0]); }
+        else if (currentPos== 0){
+            imageView.setImageResource(imageList[1]); }
+        else if (currentPos== 15){
+            imageView.setImageResource(imageList[4]); }
+        else if (currentPos== 16){
+            imageView.setImageResource(imageList[3]);
+            MediaPlayer ring= MediaPlayer.create(game_window.this,R.raw.bats);
+            ring.start();}
+        else{
+            imageView.setVisibility(View.INVISIBLE);
+        }
 
     }   //  protected void displayRoomImageV2(int currentPos)
 

@@ -17,7 +17,7 @@ import java.io.File;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_start, btn_import;
+    Button btn_start, btn_import, btn_quit, btn_about, btn_help;
 
     public static final String MY_PREFS = "prefs";
     public static final String MY_KEY = "pos";
@@ -61,6 +61,30 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(MainActivity.FLAG_DOORS,sharedPrefs.getString(FLAG_DOORS, ""));
                 startActivity(intent);
 
+            }
+        });
+        btn_quit = findViewById(R.id.btn_quit);
+        btn_quit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                System.exit(0);
+            }
+        });
+        btn_help = findViewById(R.id.btn_help);
+        btn_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), helpActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_about = findViewById(R.id.btn_about);
+        btn_about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), aboutActivity.class);
+                startActivity(intent);
             }
         });
     }

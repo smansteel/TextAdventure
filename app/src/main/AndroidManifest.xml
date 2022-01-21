@@ -21,6 +21,17 @@
             android:label="@string/title_activity_game_window"
             android:theme="@style/Theme.TextAdventure.NoActionBar" />
         <activity
+            android:name=".aboutActivity"
+            android:exported="false"
+            android:label="@string/title_activity_game_window"
+            android:theme="@style/Theme.TextAdventure.NoActionBar" />
+        <activity
+            android:name=".helpActivity"
+            android:exported="false"
+            android:label="@string/title_activity_game_window"
+            android:theme="@style/Theme.TextAdventure.NoActionBar" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
