@@ -69,6 +69,7 @@ public class game_window extends AppCompatActivity
     String items;
     boolean hasextra = false;
     boolean[] flag_doors = new boolean[] {false,false,false};
+    String[] playerinvtoadd = new String[]{};
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -90,16 +91,18 @@ public class game_window extends AppCompatActivity
             }
             Log.v("PRINT", extras.getString(USER_ITEMS)+" ");
 
+
+
+            initPlayerWithLoad( Integer.parseInt( value ) );
+           Log.d("SAVE", "onCreate: "+extras.getString(USER_ITEMS).contains("^"));
             if((extras.getString(USER_ITEMS) != null )&&(extras.getString(USER_ITEMS).contains("^"))) {
-                String[] itemstoparse = extras.getString(USER_ITEMS).split("\\^");
-                for (String s : itemstoparse) {
 
-                    thePlayer.addNewInv(find_item(Integer.parseInt(s)));
-                }
+                playerinvtoadd = extras.getString(USER_ITEMS).split("\\^");
+
             }
-
-            initPlayerWithLoad( Integer.parseInt( value ), items );
-
+            else if (extras.getString(USER_ITEMS) != null){
+                playerinvtoadd = new String[]{extras.getString(USER_ITEMS)};
+            }
 
 
         }
@@ -114,20 +117,27 @@ public class game_window extends AppCompatActivity
 
 
         readXMLFile();
+        setupControls();
         Log.v("ZEUBI", hasextra+" ");
         if(hasextra){
             String[] items_list= items.split("\\^");
-            Log.d("DEBUG", "AAAAA"+items_list.length +thedungeon.length);
+            Log.d("DEBUG", "item length"+items_list.length +"dj length"+thedungeon.length);
             for(int i = 0; i<=thedungeon.length-1;i++)
             {
                 thedungeon[i].setInventory(Integer.parseInt(items_list[i]));
 
             }
+            Log.d("SAVE", "Arrivé a la boucle for "+ playerinvtoadd.length);
+            for (String s : playerinvtoadd) {
+                Log.d("SAVE", "onCreate: "+s);
+                Log.d("SAVE", "onCreate: "+find_item(Integer.parseInt(s)).getName());
+                thePlayer.addNewInv(find_item(Integer.parseInt(s)));
+            }
 
         }
 
 
-        setupControls();
+
 
 
 
@@ -142,14 +152,10 @@ public class game_window extends AppCompatActivity
 
     }   //  protected void initPlayer()
 
-    protected void initPlayerWithLoad(int loadPosition, String items)
+    protected void initPlayerWithLoad(int loadPosition)
     {
         thePlayer = new Player( loadPosition );
-        String[] additems =items.split("\\^");
-        for(int i = 0; i<additems.length;i++)
-        {
-            thePlayer.addNewInv(find_item(Integer.parseInt(additems[i])));
-        }
+
 
 
 
@@ -376,7 +382,7 @@ public class game_window extends AppCompatActivity
 
 
 
-                    if (thePlayer.getItem_in_hand() != -1){
+                    if ((thePlayer.getItem_in_hand() != -1)&&(thePlayer.getNewInventory()!=null)){
                         thedungeon[thePlayer.getPlayerPos()].setInventory(thePlayer.getNewInventory().get(thePlayer.getItem_in_hand()).getId());
                         thePlayer.remove_from_Item(thePlayer.getNewInventory().get(thePlayer.getItem_in_hand()));
                         updateHand(thePlayer);
@@ -861,7 +867,7 @@ public class game_window extends AppCompatActivity
 
             if(id == i.getId()){
                 returnitem=  i;
-                break;
+
             }
 
         }

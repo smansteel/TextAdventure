@@ -82,6 +82,7 @@ public class Player
         this.newinventory = new ArrayList<>();
     }
         this.newinventory.add(newinventory);
+
     }
 
     public boolean removeFromNewInv(String item_to_remove){
