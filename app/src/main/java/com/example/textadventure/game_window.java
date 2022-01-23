@@ -104,7 +104,6 @@ public class game_window extends AppCompatActivity
                 playerinvtoadd = new String[]{extras.getString(USER_ITEMS)};
             }
 
-
         }
         else
         {
