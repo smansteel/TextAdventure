@@ -18,6 +18,11 @@
             <id>2</id>
 
         </item>
+        <item>
+            <name>Graal</name>
+            <id>3</id>
+
+        </item>
 
     </items>
 
@@ -122,7 +127,8 @@
         </room>
 
         <room>
-            <description>The end, congratulations !!, WINNER CHICKEN DINNER</description>
+            <description>The end, congratulations !! WINNER WINNER CHICKEN DINNER</description>
+            <room_item>3</room_item>
         </room>
 
         <room>
@@ -146,7 +152,7 @@
 
         <room>
             <north>17</north>
-            <west>20</west>
+            <west>15</west>
             <description>There doesn't seem to be a bridge, do you have a bucket to empty the river by hand</description>
         </room>
 

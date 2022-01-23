@@ -491,7 +491,7 @@ public class game_window extends AppCompatActivity
     {
         descriptionTextView.setText(thedungeon[thePlayer.getPlayerPos()].getDescription());
         refreshhandconten();
-        checkForKey();
+        //checkForKey();
 
         validDirections( thePlayer.getPlayerPos() );
 
@@ -886,7 +886,7 @@ public class game_window extends AppCompatActivity
         if(thePlayer.getNewInventory().size()!=0){
             Log.d("patate", "thePlayer.getItem_in_hand()+1 "+thePlayer.getItem_in_hand()+1+"thePlayer.getNewInventory().size() "+thePlayer.getNewInventory().size());
             thePlayer.setItem_in_hand((thePlayer.getItem_in_hand()+1)%thePlayer.getNewInventory().size());
-            item_in_hand.setText(thePlayer.getNewInventory().get(thePlayer.getItem_in_hand()).getName());}
+            item_in_hand.setText("Item in hand = "+thePlayer.getNewInventory().get(thePlayer.getItem_in_hand()).getName());}
 
         else{
             thePlayer.setItem_in_hand(-1) ;
@@ -896,7 +896,7 @@ public class game_window extends AppCompatActivity
     public void refreshhandconten(){
         if(thePlayer.getNewInventory().size()!=0){
             thePlayer.setItem_in_hand(thePlayer.getItem_in_hand()%thePlayer.getNewInventory().size());
-            item_in_hand.setText(thePlayer.getNewInventory().get(thePlayer.getItem_in_hand()).getName());}
+            item_in_hand.setText("Item in hand = "+thePlayer.getNewInventory().get(thePlayer.getItem_in_hand()).getName());}
 
         else{
             item_in_hand.setText("No item currently in the hand");
