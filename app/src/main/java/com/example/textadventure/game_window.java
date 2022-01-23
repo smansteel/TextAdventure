@@ -533,7 +533,7 @@ public class game_window extends AppCompatActivity
 
     protected void displayRoomImageV2(int currentPos)
     {
-        int[] imageList = {R.drawable.door, R.drawable.dungeon, R.drawable.key, R.drawable.bats, R.drawable.graal};
+        int[] imageList = {R.drawable.door, R.drawable.dungeon, R.drawable.key, R.drawable.bats, R.drawable.graal, R.drawable.corridor, R.drawable.ladder, R.drawable.ravine, R.drawable.wall};
 
         // only some rooms have images 1 ;49
 
@@ -548,6 +548,15 @@ public class game_window extends AppCompatActivity
             imageView.setImageResource(imageList[1]); }
         else if (currentPos== 15){
             imageView.setImageResource(imageList[4]); }
+        else if (currentPos== 5|currentPos== 6|currentPos== 12|currentPos== 9|currentPos== 13|currentPos== 18|currentPos== 7|currentPos== 8){
+            imageView.setImageResource(imageList[5]); }
+        else if (currentPos== 3){
+            imageView.setImageResource(imageList[6]); }
+        else if (currentPos== 19){
+            imageView.setImageResource(imageList[7]); }
+        else if (currentPos== 2|currentPos== 14){
+            imageView.setImageResource(imageList[8]); }
+
         else if (currentPos== 16){
             imageView.setImageResource(imageList[3]);
             MediaPlayer ring= MediaPlayer.create(game_window.this,R.raw.bats);

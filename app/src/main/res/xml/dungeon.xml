@@ -14,7 +14,7 @@
 
 
         <item>
-            <name>Bucket</name>
+            <name>Ladder</name>
             <id>2</id>
 
         </item>
@@ -50,7 +50,7 @@
 
         <room>
             <east>7</east>
-            <description>is the the BUCKEEET ???</description>
+            <description>Is this ladder ?</description>
             <room_item>2</room_item>
         </room>
 
@@ -83,7 +83,7 @@
         <room>
             <east>12</east>
             <west>4</west>
-            <description>You passed the first bridge, congratulations</description>
+            <description>You passed the first door, congratulations</description>
         </room>
 
         <room>
@@ -153,7 +153,7 @@
         <room>
             <north>17</north>
             <west>15</west>
-            <description>There doesn't seem to be a bridge, do you have a bucket to empty the river by hand</description>
+            <description>There doesn't seem to be a bridge, do you have a ladder to improvise one ?</description>
         </room>
 
     </rooms>
