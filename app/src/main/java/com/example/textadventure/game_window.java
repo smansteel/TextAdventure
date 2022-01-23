@@ -539,6 +539,7 @@ public class game_window extends AppCompatActivity
 
         //imageView.setImageResource(   imageList[currentPos] );
         imageView.setVisibility(View.VISIBLE);
+
         if(currentPos== 1|currentPos== 17){
             imageView.setImageResource(imageList[2]);
         }else if (currentPos== 4|currentPos== 10){
